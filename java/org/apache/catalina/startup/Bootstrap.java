@@ -62,6 +62,11 @@ public final class Bootstrap {
 
     static {
         // Will always be non-null
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         String userDir = System.getProperty("user.dir");
 
         // Home first
